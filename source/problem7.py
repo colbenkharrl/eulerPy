@@ -26,8 +26,9 @@ def next_prime(cur_prime):
 
 #   test if a number is prime
 def prime(number):
-    if number == 2: return True
-    for i in range (2, int(number - 1), 1):
+    if number == 2 or number == 3: return True
+    if number == 4: return False
+    for i in range (2, int(sqrt(number) + 1), 1):
         if number % i == 0:
             return False
     return True
